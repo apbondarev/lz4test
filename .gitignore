@@ -1,3 +1,5 @@
 *.o
 *.preprocessed.c
 lz4test
+.idea
+*.iml
