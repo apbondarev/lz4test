@@ -11,5 +11,9 @@ lz4test: lz4.o lz4test.0 lz4.preprocessed.c
 
 lz4.preprocessed.c: lz4.h lz4.c
 	cpp -o lz4.preprocessed.c lz4.c
+
 clean:
 	rm -f *.o lz4.preprocessed.c lz4test
+
+cparser: C.g4
+	antlr4 -o src/main/java/ru/apbondarev/cparser -package ru.apbondarev.cparser C.g4
